@@ -21,15 +21,17 @@ MO2MacroChoice:
   Gui, mo2:add, button, x+10 gARCH, Archery
   Gui, mo2:add, button, x+10 gRIDE, Riding
   Gui, mo2:add, button, x+10 gTAME, Taming
+  Gui, mo2:add, button, x+10 gMINE, Mining
   Gui, mo2:add, button, x10 y+10 gCRAFT, Craft
   Gui, mo2:add, button, x+10 gBUILD, Build
   Gui, mo2:add, button, x+10 gGATHER, Gather
   Gui, mo2:add, button, x+10 gGATHERM, Move Gather
   Gui, mo2:add, button, x+10 gLOOT, Loot
+  Gui, mo2:add, button, x+10 gCHOP, Woodcutting
   Gui, mo2:add, button, x10 y+10 gAFK, Anti AFK
   Gui, mo2:add, button, x+10 gEXTRACT, Extraction Info
   Gui, mo2:add, button, x+10 gBUTCH, Butchery Info
-   Gui, mo2:add, button, x+10 gPLANT, Plant Info
+  Gui, mo2:add, button, x+10 gPLANT, Plant Info
   Gui, mo2:show
   Gui, mo2:+lastfound
   WinWaitClose
@@ -72,6 +74,10 @@ MO2MacroChoice:
     Run, Scripts\mo2TamingB.ahk
     Goto, MO2MacroGuiClose
 	
+  MINE:
+    Run, Scripts\mo2MineOnceB.ahk
+    Goto, MO2MacroGuiClose
+	
   CRAFT:
     Run, Scripts\mo2Craft1.ahk
     Goto, MO2MacroGuiClose
@@ -90,6 +96,10 @@ MO2MacroChoice:
 
   LOOT:
     Run, Scripts\mo2Loot.ahk
+    Goto, MO2MacroGuiClose
+	
+  CHOP:
+    Run, Scripts\mo2ChopOnceB.ahk
     Goto, MO2MacroGuiClose
 	
   AFK:
