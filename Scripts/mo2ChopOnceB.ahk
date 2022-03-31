@@ -12,7 +12,7 @@ interactKey := R
 sheatheKey := X
 notification := 0
 
-MsgBox, Walk to node with gathering tool equipped and Press F1 to mine - F2 to reassign sheathe/interact key - F3 toggle notifications - F4 to mine half node - F10 to Reset - F11 to quit
+MsgBox, Walk to node with gathering tool equipped and Press F1 to chop - F2 to reassign sheathe/interact key - F3 toggle notifications - F4 to mine half node - F10 to Reset - F11 to quit
 
 *f1::
 WinGet, Mortal, List, Mortal Online 2,
@@ -24,7 +24,7 @@ ControlSend,,{%interactKey% Down}, % "ahk_id" . A_Space . Mortal1,
 Sleep 1750
 ControlSend,,{%interactKey% Up}, % "ahk_id" . A_Space . Mortal1,
 
-Sleep 150000
+Sleep 210000
 
 
 ControlSend,,{%sheatheKey% Down}, % "ahk_id" . A_Space . Mortal1,
@@ -35,7 +35,7 @@ ControlSend,,{%sheatheKey% Up}, % "ahk_id" . A_Space . Mortal1,
 
 if notification
 {
-	MsgBox, Mining complete
+	MsgBox, Chopping complete
 }
 
 
@@ -74,7 +74,7 @@ ControlSend,,{%interactKey% Down}, % "ahk_id" . A_Space . Mortal1,
 Sleep 1750
 ControlSend,,{%interactKey% Up}, % "ahk_id" . A_Space . Mortal1,
 
-Sleep 300000
+Sleep 420000
 
 
 ControlSend,,{%sheatheKey% Down}, % "ahk_id" . A_Space . Mortal1,
@@ -85,7 +85,7 @@ ControlSend,,{%sheatheKey% Up}, % "ahk_id" . A_Space . Mortal1,
 
 if notification
 {
-	MsgBox, Mining complete
+	MsgBox, Chopping complete
 }
 
 
